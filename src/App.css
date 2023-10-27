@@ -1,0 +1,53 @@
+#root {
+  width: 100vw;
+  overflow: hidden;
+}
+header {
+  background-color: aquamarine;
+  width: 100vw;
+  height: 20px;
+  padding: 20px;
+  text-align: center;
+}
+footer {
+  background-color: aquamarine;
+  max-width: 100vw;
+  height: 20px;
+  padding: 20px;
+  text-align: center;
+  align-self: flex-end;
+}
+.methods {
+  min-height: calc(100vh - 220px);
+  display: flex;
+  justify-content: center;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 5px;
+  justify-content: flex-start;
+}
+.method {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  width: 400px;
+  background-color: bisque;
+}
+.trash {
+  margin-left: auto;
+  cursor: pointer;
+}
+form {
+  display: flex;
+  margin: 20px auto;
+  justify-content: center;
+}
+form input {
+  width: 300px;
+  margin: 0 5px;
+}
