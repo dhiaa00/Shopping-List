@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Methods from "./components/Methods";
 import AddItem from "./components/AddItem";
+import Search from "./components/Search";
 
 function App() {
   const [methods, setMethods] = useState(
@@ -76,6 +77,20 @@ function App() {
     setNewItem("");
   };
 
+  // searching items
+
+  const [searchItem, setSearchItem] = useState("");
+
+  const handleSearch = (e) => {
+    const exp = e.target.value;
+    setMethods(JSON.parse(localStorage.getItem("methods")));
+    const temp = JSON.parse(localStorage.getItem("methods"));
+    const regEx = new RegExp(`${exp}`, "i");
+    exp !== ""
+      ? setMethods(temp.filter((m) => regEx.test(m.name)))
+      : setMethods(JSON.parse(localStorage.getItem("methods")));
+  };
+
   return (
     <>
       <Header head="Your Shopping List" />
@@ -83,6 +98,11 @@ function App() {
         newItem={newItem}
         setNewItem={setNewItem}
         handleSubmit={handleSubmit}
+      />
+      <Search
+        searchItem={searchItem}
+        setSearchItem={setSearchItem}
+        handleSearch={handleSearch}
       />
       <Methods
         methods={methods}
