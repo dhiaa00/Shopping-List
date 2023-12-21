@@ -1,7 +1,7 @@
 import Method from "./method";
 
 function MethList({ methods, setMethods, handleCheck, handleRemove }) {
-  return (
+  return methods.length !== 0 ? (
     <ul>
       {methods.map((m) => {
         console.log(m);
@@ -15,6 +15,8 @@ function MethList({ methods, setMethods, handleCheck, handleRemove }) {
         );
       })}
     </ul>
+  ) : (
+    <p>No Items</p>
   );
 }
 

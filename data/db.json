@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Egg",
+      "checked": false
+    },
+    {
+      "id": 2,
+      "name": "Bread",
+      "checked": false
+    },
+    {
+      "id": 3,
+      "name": "Kouskous",
+      "checked": false
+    },
+    {
+      "id": 4,
+      "name": "Hoodie",
+      "checked": false
+    },
+    {
+      "id": 5,
+      "name": "USB-c cable",
+      "checked": false
+    }
+  ]
+}

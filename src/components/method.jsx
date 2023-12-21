@@ -1,8 +1,19 @@
+import { useContext, useEffect, useState } from "react";
 import { FaTrash } from "../../node_modules/react-icons/fa";
+import { darkMode } from "../App";
 
 function Method({ m, setMethods, handleCheck, handleRemove }) {
+  const [methClasses, setMethClasses] = useState("bg-misque");
+  const theme = useContext(darkMode);
+  useEffect(() => {
+    if (theme) {
+      setMethClasses("bg-[#a77f4f]");
+    } else {
+      setMethClasses("bg-misque");
+    }
+  }, [theme]);
   return (
-    <li className="method" key={m.id}>
+    <li className={`method ${methClasses}`} key={m.id}>
       <input
         id={m.id}
         type="checkbox"

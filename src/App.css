@@ -8,6 +8,9 @@ header {
   height: 20px;
   padding: 20px 0px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 footer {
   background-color: aquamarine;
@@ -15,10 +18,12 @@ footer {
   height: 20px;
   padding: 20px 0px;
   text-align: center;
-  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .methods {
-  min-height: calc(100vh - 263px);
+  min-height: calc(100vh - 300px);
   display: flex;
   justify-content: center;
 }
@@ -57,4 +62,14 @@ form input {
   width: 360px;
   height: 40px;
   border: 1px solid black;
+}
+.themeBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+button img {
+  width: 50px;
 }
